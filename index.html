@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 60%);
+        }
+
+        .logos {
+            width: 10%;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        .container {
+            background-color: white;
+            box-shadow: 0px 1px 11px 3px rgb(234, 230, 230);
+            padding: 0.5rem;
+            width: 200px;
+            height: 310px;
+            border-radius: 10px;
+
+        }
+
+        .logo {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 0.5rem;
+        }
+
+        img:hover {
+            transform: rotate(25deg);
+            transition: 0.7s;
+        }
+
+        i {
+            color: gray;
+        }
+
+        #name {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 0.8rem;
+        }
+
+        .color {
+            display: flex;
+            margin-left: 0.8rem;
+        }
+
+        #price {
+            position: relative;
+            left: 2.5rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: grey;
+        }
+
+        label {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(82, 82, 82);
+        }
+
+        .pur {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: powderblue;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 0 2px white, 0 0 0 4px powderblue;
+        }
+
+        .red {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: red;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .black {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: black;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .black:active {
+            box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+        }
+
+        .red:active {
+            box-shadow: 0 0 0 2px white, 0 0 0 4px red;
+        }
+
+        input[type="submit"] {
+            padding: 0.5rem 3.5rem;
+            margin-left: 0.5rem;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 60%);
+            color: white;
+        }
+
+        .type {
+            margin-left: 0.5rem;
+        }
+
+        input[type="submit"]:hover {
+            cursor: pointer;
+            background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 90%);
+            transition: 0.7s;
+            color: black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo">
+                <div class="logo1">
+                    <img src="./logo.png" alt="" class="logos">
+                </div>
+                <div class="cart">
+                    <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="product">
+            <img src="./jordan-removebg-preview (1).png" alt="" id="move">
+        </div>
+        <div class="name_product">
+            <p id="name">Nike Air Jordan 1</p>
+        </div>
+        <div class="color">
+            <div class="nameco">
+                <label for="">Color:</label>
+            </div>
+            <div class="type">
+                <span class="pur" onclick="changco()" id="purple"></span>
+                <span class="red" onclick="changco1()" id="red"></span>
+                <span class="black" onclick="changco2()" id="black"></span>
+                <span class="blue" id="price"> 125$</span>
+            </div>
+
+        </div><br>
+        <div class="btn">
+            <input type="submit" value="Add to Cart">
+        </div>
+    </div>
+</body>
+<script>
+    function changco() {
+        document.getElementById("price").innerHTML = "125$";
+        document.getElementById("name").innerHTML = "Nike Air Jordan 1"
+        document.getElementById("purple").style.boxShadow = "0 0 0 2px white, 0 0 0 4px powderblue";
+        document.getElementById("red").style.boxShadow = "0 0 0 2px white, 0 0 0 4px white";
+        document.getElementById("move").src = "jordan-removebg-preview (1).png";
+        document.getElementById("black").style.boxShadow = "0 0 0 2px white, 0 0 0 4px white";
+    }
+    function changco1() {
+        document.getElementById("price").innerHTML = "175$";
+        document.getElementById("name").innerHTML = "Air Jordan 1 2022";
+        document.getElementById("purple").style.boxShadow = "0 0 0 2px white, 0 0 0 4px white";
+        document.getElementById("red").style.boxShadow = "0 0 0 2px white, 0 0 0 4px red";
+        document.getElementById("move").src = "img01__1_-removebg-preview.png";
+        document.getElementById("black").style.boxShadow = "0 0 0 2px white, 0 0 0 4px white";
+
+    }
+    function changco2() {
+        document.getElementById("price").innerHTML = "100$";
+        document.getElementById("name").innerHTML = "Nike Air Jordan 1 Retro";
+        document.getElementById("purple").style.boxShadow = "0 0 0 2px white, 0 0 0 4px white";
+        document.getElementById("red").style.boxShadow = "0 0 0 2px white, 0 0 0 4px white";
+        document.getElementById("black").style.boxShadow = "0 0 0 2px white, 0 0 0 4px black";
+        document.getElementById("move").src = "Air-Jordan-1-Retro-High-Bloodline-removebg-preview.png";
+
+    }
+
+</script>
+
+</html>
